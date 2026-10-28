@@ -1,0 +1,6 @@
+{
+  "name": "Kshetrajna",
+  "description": "Capture what matters. Field-documentation and photo-stamping camera with authentic time, location stamps, and local journal.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Kshetrajna</string>
+    <string name="sanskrit_name">क्षेत्रज्ञ</string>
+    <string name="tagline">CAPTURE WHAT MATTERS.</string>
+    <string name="desc_logo">Kshetrajna Insignia</string>
+    <string name="desc_shutter">Capture Photograph</string>
+    <string name="desc_gallery">Open Field Journal</string>
+    <string name="desc_switch_camera">Switch Camera</string>
+    <string name="desc_toggle_location">Toggle Location Recording</string>
+    <string name="desc_settings">Settings</string>
+    <string name="desc_back">Go Back</string>
+    <string name="desc_close">Close</string>
+    <string name="desc_share">Share Photo</string>
+    <string name="desc_delete">Delete Photo</string>
+    <string name="desc_edit_note">Edit Field Note</string>
+    <string name="desc_flash">Toggle Flash</string>
+    <string name="desc_grid">Toggle Grid</string>
+</resources>

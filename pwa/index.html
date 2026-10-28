@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Kshetrajna (क्षेत्रज्ञ) - Precision Geodetic Camera</title>
+  <meta name="description" content="Capture what matters. Precision field camera with verified temporal and spatial provenance.">
+  <meta name="theme-color" content="#08261C">
+  <link rel="manifest" href="./manifest.json">
+  <link rel="icon" type="image/svg+xml" href="./icons/icon-192.svg">
+  <link rel="apple-touch-icon" href="./icons/icon-192.svg">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <!-- Header Bar -->
+  <header class="top-header">
+    <div class="brand-wrapper">
+      <img src="./icons/icon-192.svg" alt="Kshetrajna Insignia" class="brand-logo">
+      <div>
+        <span class="brand-title">Kshetrajna</span>
+        <span class="brand-sanskrit">क्षेत्रज्ञ</span>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="icon-btn" id="journal-btn" aria-label="Open Field Journal" title="Field Journal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+          <circle cx="8.5" cy="8.5" r="1.5"/>
+          <polyline points="21 15 16 10 5 21"/>
+        </svg>
+      </button>
+      <button class="icon-btn" id="switch-cam-btn" aria-label="Switch Camera" title="Flip Camera">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M23 4v6h-6"/>
+          <path d="M1 20v-6h6"/>
+          <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Live Camera Viewfinder -->
+  <main class="camera-container">
+    <video id="camera-video" autoplay playsinline muted></video>
+
+    <!-- Geodetic Telemetry Overlay -->
+    <div class="telemetry-overlay">
+      <div class="telemetry-row">
+        <span class="telemetry-badge">GEODETIC HUD</span>
+        <span id="hud-time">--:--:--</span>
+      </div>
+      <div class="telemetry-row">
+        <span class="telemetry-coord" id="hud-coord">GPS ACQUIRING...</span>
+        <span id="hud-accuracy">±--m</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- Shutter Bar Controls -->
+  <footer class="bottom-controls">
+    <div style="width: 44px;"></div>
+    <button class="shutter-btn" id="shutter-btn" aria-label="Capture photograph">
+      <div class="shutter-inner"></div>
+    </button>
+    <div style="width: 44px;"></div>
+  </footer>
+
+  <!-- Capture Review Modal -->
+  <div class="modal" id="review-modal">
+    <div class="modal-header">
+      <h2 style="font-size: 1.1rem; color: var(--warm-ivory);">Review Field Capture</h2>
+      <button class="icon-btn" id="close-review-btn" aria-label="Close review">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="preview-canvas-wrapper">
+        <canvas id="preview-canvas"></canvas>
+      </div>
+
+      <div>
+        <label for="field-note-input" style="font-size: 0.85rem; color: var(--muted-sage); display: block; margin-bottom: 6px;">Field Observation Note:</label>
+        <textarea id="field-note-input" class="note-input" rows="2" placeholder="Add site, inspection, or research notes..."></textarea>
+      </div>
+
+      <div class="modal-actions">
+        <button class="action-btn btn-secondary" id="share-photo-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="18" cy="5" r="3"/>
+            <circle cx="6" cy="12" r="3"/>
+            <circle cx="18" cy="19" r="3"/>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+          </svg>
+          Share / Export
+        </button>
+        <button class="action-btn btn-primary" id="save-photo-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+            <polyline points="17 21 17 13 7 13 7 21"/>
+            <polyline points="7 3 7 8 15 8"/>
+          </svg>
+          Save to Journal
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Journal Modal -->
+  <div class="modal" id="journal-modal">
+    <div class="modal-header">
+      <h2 style="font-size: 1.1rem; color: var(--warm-ivory);">Field Journal</h2>
+      <button class="icon-btn" id="close-journal-btn" aria-label="Close journal">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="journal-grid" id="journal-list">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

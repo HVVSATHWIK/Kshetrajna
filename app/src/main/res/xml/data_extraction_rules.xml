@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- Exclude local high-res field capture photos from cloud backup -->
+        <exclude domain="file" path="photos" />
+    </cloud-backup>
+    <device-transfer>
+        <!-- Retain records on direct device-to-device migration -->
+        <include domain="file" path="photos" />
+    </device-transfer>
+</data-extraction-rules>

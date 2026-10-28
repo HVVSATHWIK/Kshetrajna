@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Kshetrajna Exact Palette -->
+    <color name="forest_green">#0F3D2E</color>
+    <color name="forest_green_dark">#08261C</color>
+    <color name="forest_green_light">#1E5844</color>
+    <color name="forest_green_container">#164837</color>
+
+    <color name="warm_gold">#D4A574</color>
+    <color name="warm_gold_light">#E5C39F</color>
+    <color name="warm_gold_dark">#A67844</color>
+
+    <color name="warm_ivory">#F8F5ED</color>
+    <color name="warm_ivory_surface">#FAF8F3</color>
+    <color name="warm_ivory_container">#EFECE3</color>
+
+    <color name="muted_sage">#8DAA91</color>
+    <color name="charcoal">#1F1F1F</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+</resources>

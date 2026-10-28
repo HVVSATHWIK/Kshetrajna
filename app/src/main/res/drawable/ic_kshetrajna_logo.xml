@@ -1,0 +1,46 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- Open circular / arched dome of awareness -->
+    <path
+        android:strokeColor="#D4A574"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:pathData="M 18,60 C 18,34 32,18 50,18 C 68,18 82,34 82,60" />
+
+    <!-- Radiant central observer point / rising sun (The Knower) -->
+    <path
+        android:fillColor="#D4A574"
+        android:pathData="M 50,34 A 6,6 0 1,0 50,46 A 6,6 0 1,0 50,34 Z" />
+
+    <!-- Horizon / field furrow 1 (upper field curve) -->
+    <path
+        android:strokeColor="#0F3D2E"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:pathData="M 24,62 Q 50,71 76,62" />
+
+    <!-- Horizon / field furrow 2 (middle field curve) -->
+    <path
+        android:strokeColor="#0F3D2E"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:pathData="M 28,70 Q 50,79 72,70" />
+
+    <!-- Horizon / field furrow 3 (lower field foundation) -->
+    <path
+        android:strokeColor="#D4A574"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:pathData="M 36,78 Q 50,85 64,78" />
+
+    <!-- Subtle vertical axis alignment line -->
+    <path
+        android:strokeColor="#D4A574"
+        android:strokeWidth="1.5"
+        android:strokeLineCap="round"
+        android:pathData="M 50,22 L 50,27" />
+</vector>
